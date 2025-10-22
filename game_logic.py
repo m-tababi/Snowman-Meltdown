@@ -80,3 +80,16 @@ def play_game():
             display_game_state(mistakes, secret_word, guessed_letters)
             print("Congratulations! You guessed the word:", secret_word)
             break
+
+    # Ask if the player wants to play again
+    while True:
+        replay = input("Do you want to play again? (yes/no): ").lower()
+        if replay == "yes":
+            print("\nStarting a new game...\n")
+            play_game()  # Start again
+            break
+        elif replay == "no":
+            print("Thanks for playing! Goodbye")
+            break
+        else:
+            print("Please enter 'yes' or 'no'.")
